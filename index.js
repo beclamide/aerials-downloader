@@ -42,7 +42,7 @@ function download(video) {
 
     var bar;
 
-    progress(request('http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/comp_GL_G004_C010_v03_6Mbps.mov'))
+    progress(request(video.url))
       .on('progress', state => {
         if (!bar) {
           bar = new ProgressBar('  downloading [:bar] :rate/bps :percent :etas', {
