@@ -56,7 +56,7 @@ function download(video) {
         }
       })
       .pipe(
-        fs.createWriteStream(`${downloadFolder}/${video.accessibilityLabel}__${video.id}.mp4`)
+        fs.createWriteStream(`${downloadFolder}/${video.accessibilityLabel}__${video.id}.mov`)
         .on('finish', () => {
           bar.update(100);
           resolve(true);
